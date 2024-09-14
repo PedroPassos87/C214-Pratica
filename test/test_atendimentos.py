@@ -28,6 +28,18 @@ class TestAtendimentos(unittest.TestCase):
         self.assertIsNotNone(professor, "Professor com ID 5 não encontrado")
         self.assertEqual(professor["predio"], 4, "Predio do professor com ID 5 deve ser 4")
 
+    def test_nome_professor_karina(self):
+        professor = next((p for p in self.atendimentos if p["id"] == 4), None)
+        self.assertIsNotNone(professor, "Professor com ID 4 não encontrado")
+        self.assertEqual(professor["professor"], "Karina", "Nome do professor com ID 4 deve ser 'Karina'")
+
+    def test_predio_professor_rafael(self):
+        professor = next((p for p in self.atendimentos if p["id"] == 6), None)
+        self.assertIsNotNone(professor, "Professor com ID 6 não encontrado")
+        self.assertEqual(professor["predio"], 6, "Prédio do professor com ID 6 deve ser 6")
+
+
+
     #---------------------------------Testes Falhas-------------------------------------------#
 
     def test_periodo_professor_incorreto(self):
@@ -49,6 +61,18 @@ class TestAtendimentos(unittest.TestCase):
         professor = next((p for p in self.atendimentos if p["id"] == 1), None)
         self.assertIsNotNone(professor, "Professor com ID 1 não encontrado")
         self.assertNotEqual(professor["professor"], "Alves, o capitao monitor", "Nome do professor com ID 1 não deve ser 'Alves, o capitao monitor'")
+
+    def test_predio_professor_chris(self):
+        professor = next((p for p in self.atendimentos if p["id"] == 3), None)
+        self.assertIsNotNone(professor, "Professor com ID 3 não encontrado")
+        self.assertEqual(professor["predio"], 4, "Prédio do professor com ID 3 deve ser 4")
+
+    def test_nome_professor_soned_incorreto(self):
+        professor = next((p for p in self.atendimentos if p["id"] == 2), None)
+        self.assertIsNotNone(professor, "Professor com ID 2 não encontrado")
+        self.assertNotEqual(professor["professor"], "Maria", "Nome do professor com ID 2 não deve ser 'Maria'")
+
+
 
     
 
