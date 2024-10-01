@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-class AtendimentoService(ABC):
+class HorarioService(ABC):
 
     @abstractmethod
-    def procura_por_id(self):
+    def Procura(self):
         pass
