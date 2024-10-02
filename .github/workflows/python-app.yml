@@ -69,9 +69,10 @@ jobs:
     needs: [test, build]
     steps:
     - name: Enviando email
-      run: |
-        pwd
-        ls
-        chmod +x .scripts/notification.sh
+      uses: actions/checkout@v4
+    - run: |
+       cd ./scripts/notification.sh
+       sh notification.sh
+      
       env:
         EMAIL: ${{ secrets.EMAIL_NOTIFICACAO}}
