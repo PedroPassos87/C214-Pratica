@@ -71,6 +71,7 @@ jobs:
     - name: Enviando email
       uses: actions/checkout@v4
     - run: |
+       cd ..
        cd ./scripts/notification.sh
        sh notification.sh
       
