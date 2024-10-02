@@ -69,6 +69,7 @@ jobs:
     needs: [test, build]
     steps:
     - name: Enviando email
-      uses: actions/checkout@v4       
+      uses: actions/checkout@v4
     - run: sh scripts/notification.sh
-      
+    env:
+      EMAIL_NOTIFACACAO: ${{ secrets.EMAIL_NOTIFACACAO }}
