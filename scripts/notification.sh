@@ -1,8 +1,5 @@
-import win32com.client as win32
-
-outlook = win32.Dispatch('Outlook.Application')
-message.outlook.CreateItem(0)
-message.To = 'EMAIL_NOTIFICACAO'
-message.Subject = 'Github Actions'
-message.Body = 'Pipeline executado!'
-message.Send()
+pwd
+false
+echo "HAHAHAHAHAHAHAH"
+sudo apt-get install mailutils
+echo "Mandando e-mail com o mailutils do linux" | mail -s "EMAIL_NOTIFICACAO" gfernandes@ges.inatel.br
