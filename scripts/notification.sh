@@ -8,4 +8,4 @@ if [ -z "$RECIPIENT" ]; then
 fi
 
 
-echo "Pipeline executado!" | mail -s "Github Actions" "$RECIPIENT"
+echo "Pipeline executado!" | mail -s "Github Actions" $RECIPIENT

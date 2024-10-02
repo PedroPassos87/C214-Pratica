@@ -71,10 +71,7 @@ jobs:
     - name: Enviando email
       uses: actions/checkout@v4
     - run: |
-        chmod +x scripts/notification.sh
-        ./scripts/notification.sh
-    
-
+        sh scripts/notification.sh
     env:
       EMAIL_NOTIFICACAO: ${{ secrets.EMAIL_NOTIFICACAO }}
 
