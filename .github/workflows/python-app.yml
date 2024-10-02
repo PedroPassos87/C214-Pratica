@@ -72,6 +72,6 @@ jobs:
       uses: actions/checkout@v4
     - run: sh scripts/notification.sh
     env:
-      EMAIL_NOTIFICACAO: ${{ secrets.EMAIL_NOTIFICACAO }}
+      EMAIL: ${{ vars.EMAIL_NOTIFICACAO }}
 
 #uiuiuiuiuiuiuiui 
