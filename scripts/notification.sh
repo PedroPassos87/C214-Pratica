@@ -7,5 +7,5 @@ if [ -z "$RECIPIENT" ]; then
   exit 1
 fi
 
-
+sudo apt-get install mailutils
 echo "Pipeline executado!" | mail -s "Github Actions" $RECIPIENT
