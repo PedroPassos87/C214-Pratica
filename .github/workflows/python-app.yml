@@ -70,8 +70,7 @@ jobs:
     steps:
     - name: Enviando email
       run: |
-        pwd
-        ls
-        chmod +x .scripts/notification.sh
+        cds ./scripts
+        chmod +x notification.sh
       env:
         EMAIL: ${{ secrets.EMAIL_NOTIFICACAO}}
