@@ -74,5 +74,3 @@ jobs:
         sh scripts/notification.sh
     env:
       EMAIL_NOTIFICACAO: ${{ secrets.EMAIL_NOTIFICACAO }}
-
-#uiuiuiuiuiuiuiui 
