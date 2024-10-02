@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 RECIPIENT="$EMAIL_NOTIFICACAO"
 
