@@ -71,6 +71,5 @@ jobs:
     - name: Enviando email
       run: |
         chmod +x ./scripts/notification.sh
-        ./scripts/notification.sh
       env:
         EMAIL: ${{ secrets.EMAIL_NOTIFICACAO}}
