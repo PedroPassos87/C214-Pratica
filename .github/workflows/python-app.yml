@@ -68,6 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test, build]
     steps:
+    - name: Enviando email
       run: |
         chmod +x ./notification.sh
         ./notification.sh
