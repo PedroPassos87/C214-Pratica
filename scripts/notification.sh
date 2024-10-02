@@ -2,4 +2,4 @@ pwd
 false
 echo "HAHAHAHAHAHAHAH"
 sudo apt-get install mailutils
-echo "Mandando e-mail com o mailutils do linux" | mail -s "EMAIL_NOTIFICACAO" gfernandes@ges.inatel.br
+echo "Pipeline executada!" | mail -s "GithubActions" secrets.EMAIL_NOTIFICACAO
