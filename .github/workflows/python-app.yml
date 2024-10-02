@@ -68,7 +68,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test, build]
     steps:
-    - name: Enviando email
       uses: actions/checkout@v4       
-    - run: sh scripts/notification.sh
-      
+    - name: Enviando email
+        run: |
+          chmod +x .scripts/notification.sh
+          .scripts/notification.sh
+        env:
+          EMAIL_NOTIFICACAO: ${{ secrets.EMAIL_NOTIFICACAO }}
